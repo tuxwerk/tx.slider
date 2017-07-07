@@ -5,18 +5,18 @@
 		      hide_arrows python: navtype not in ('arrows', 'both');
 		      ">
   <div class="tx-slider-container"
-       tal:attributes="class string:tx-slider-container tx-slider-${uid} tx-slider-${view/class_name};
-		       style string:padding-bottom: ${view/padding}%;"
+       tal:attributes="class string:tx-slider-container tx-slider-${uid} ${view/class_name};"
        i18n:domain="tx.slider">
+    <div tal:omit-tag="hide_arrows" class="cycle-next"></div>
+    <div tal:omit-tag="hide_arrows" class="cycle-prev"></div>
     <div tal:attributes="data-cycle-fx      view/effect;
 			 data-cycle-random  view/randomize;
 			 data-cycle-speed   view/speed;
 			 data-cycle-timeout view/pause;
 			 data-cycle-loop    continuous;
-			 data-cycle-auto-height view/ratio;
 			 "
 	 class="cycle-slideshow"
-	 data-cycle-auto-height="false"
+	 data-cycle-auto-height="0"
 	 data-cycle-delay="0"
 	 data-cycle-loop="0"
 	 data-cycle-log="false"
@@ -29,12 +29,12 @@
 	 data-cycle-speed="1000"
 	 data-cycle-timeout="2000"
 	 data-cycle-swipe="true"
+	 data-cycle-prev=".tx-slider-container .cycle-prev"
+	 data-cycle-next=".tx-slider-container .cycle-next"
 	 data-cycle-slides="> div.slide"
 	 data-off-cycle-pager-template="<span>{{slideNum}}</span>"
 	 >
       <div tal:omit-tag="hide_pager" class="cycle-pager"></div>
-      <div tal:omit-tag="hide_arrows" class="cycle-next"></div>
-      <div tal:omit-tag="hide_arrows" class="cycle-prev"></div>
       <tal:repeat repeat="slide view/slides">
 	<div class="slide">
 	  <a href="" tal:attributes="href string:${context/portal_url}${slide/link_reference}">

@@ -10,7 +10,6 @@ from plone.fieldsets.form import FieldsetsEditForm
 from plone.scale.scale import scaleImage
 
 from Products.CMFDefault.formlib.schema import SchemaAdapterBase
-from plone.app.controlpanel.widgets import MultiCheckBoxVocabularyWidget
 from plone.app.form import base as ploneformbase
 from plone.app.form.widgets.wysiwygwidget import WYSIWYGWidget
 #FIXME: add a nice widget for image upload
@@ -19,14 +18,16 @@ from plone.app.form.widgets.wysiwygwidget import WYSIWYGWidget
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from five.formlib import formbase
 
-from tx.slider.interfaces import ISliderPage, ISlide, \
-    IPageSliderSettings, ISliderSettings
+from tx.slider.interfaces import ISliderPage, ISlide, IPageSliderSettings, ISliderSettings
 from tx.slider import message_factory as _
 from tx.slider.widgets import SlidesWidget, HiddenWidget
 from tx.slider.settings import PageSliderSettings
-from zope.publisher.interfaces import NotFound
 from plone.app.form.validators import null_validator
 from Products.statusmessages.interfaces import IStatusMessage
+
+from zope.component import getUtility
+from plone.registry.interfaces import IRegistry
+
 
 class AddSlideAdapter(SchemaAdapterBase):
     """
@@ -56,6 +57,18 @@ class AddSlideAdapter(SchemaAdapterBase):
                 return val[name]
         return u""
         
+    def get_configuration(self):
+        return self.__get_property__('configuration')
+
+    def set_configuration(self, value):
+        pass
+
+    def get_heading(self):
+        return self.__get_property__('heading')
+
+    def set_heading(self, value):
+        pass
+
     def get_slide(self):
         return self.__get_property__('html')
 
@@ -85,7 +98,16 @@ class AddSlideAdapter(SchemaAdapterBase):
     def set_link_reference(self, value):
         pass
 
+    def get_url(self):
+        return self.__get_property__('url')
+
+    def set_url(self, value):
+        pass
+
     link_reference = property(get_link_reference, set_link_reference)
+    url = property(get_url, set_url)
+    configuration = property(get_configuration, set_configuration)
+    heading = property(get_heading, set_heading)
     slide = property(get_slide, set_slide)
     index = property(get_index, set_index)
     image = property(get_image, set_image)
@@ -127,7 +149,8 @@ class AddSlideForm(formbase.EditFormBase):
         image = data.get('image')
         image_type = None
         if image != None:
-            (image, image_type, image_size) = scaleImage(image, width=500, height=500)
+            scale_width = getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanel.image_scale_width']
+            (image, image_type, image_size) = scaleImage(image, width=scale_width)
         else:
             if index != -1:
                 image      = slides[index].get('image')
@@ -137,10 +160,13 @@ class AddSlideForm(formbase.EditFormBase):
         uuid = uuid4().hex
 
         value = {
-            'link_reference': data.get('link_reference'),
+            'configuration': data.get('configuration'),
+            'heading': data.get('heading'),
+            'html': data.get('slide'),
             'image': image,
             'image_type': image_type,
-            'html': data.get('slide'),
+            'link_reference': data.get('link_reference'),
+            'url': data.get('url'),
             'uuid': uuid
         }
 

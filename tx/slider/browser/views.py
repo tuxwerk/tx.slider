@@ -56,11 +56,6 @@ class SlideImageView(SlideBaseView):
         return self.slides[index].get('image')
 
 class RemoveSlideView(SlideBaseView):
-    """
-    For doing operations on a slide
-    """
-
-    slides_template = ViewPageTemplateFile('templates/slides.pt')
 
     def __init__(self, context, request):
         super(RemoveSlideView, self).__init__(context, request)

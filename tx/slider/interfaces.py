@@ -58,9 +58,9 @@ class ISliderSettings(Interface):
 
     configuration = schema.Choice(
         source="slider_configuration_choices",
-        title=_(u"Slider configuration"),
-        description=_(u"Choose a configuration. Configurations can be added in the control panel."),
-        required=True
+        title=_(u"Slider layout"),
+        description=_(u"Choose a layout for all sliders."),
+        required=False
     )
 
     only_here = schema.Bool(
@@ -141,11 +141,16 @@ class IPageSliderSettings(Interface):
 
 class ISlide(Interface):
 
-    link_reference = schema.Choice(
-        title=_(u"Link to content"),
-        description=_(u"Choose a content item to link this slide to."),
-        source=SearchableTextSourceBinder({},
-                                          default_query='path:')
+    configuration = schema.Choice(
+        source="slide_configuration_choices",
+        title=_(u"Layout"),
+        description=_(u"Choose a layout for this slide."),
+        required=False
+    )
+
+    heading = schema.TextLine(
+        title=_(u"Heading"),
+        required=False,
     )
     
     image = schema.Bytes(
@@ -158,6 +163,19 @@ class ISlide(Interface):
         required=False
     )
 
+    link_reference = schema.Choice(
+        title=_(u"Link to content"),
+        description=_(u"Choose a content item to link this slide to."),
+        source=SearchableTextSourceBinder({}, default_query='path:'),
+        required=False,
+    )
+
+    url = schema.URI(
+        title=_(u'External link'),
+        description=_(u'Please enter a full URL. Has precedence before the above field.'),
+        required=False,
+    )
+    
     index = schema.Int(
         title=u'',
         required=False

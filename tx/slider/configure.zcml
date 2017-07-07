@@ -25,34 +25,38 @@
     />
 
   <utility provides="zope.schema.interfaces.IVocabularyFactory"
-             component=".configlet.navigation_type_choices"
+             component=".configlet.slider_navigation_type_choices"
              name="slider_navigation_type_choices"/>
 
   <utility provides="zope.schema.interfaces.IVocabularyFactory"
-             component=".configlet.effect_choices"
+             component=".configlet.slider_effect_choices"
              name="slider_effect_choices"/>
 
   <utility provides="zope.schema.interfaces.IVocabularyFactory"
-             component=".configlet.configuration_choices"
+             component=".configlet.slider_configuration_choices"
              name="slider_configuration_choices"/>
+
+  <utility provides="zope.schema.interfaces.IVocabularyFactory"
+             component=".configlet.slide_configuration_choices"
+             name="slide_configuration_choices"/>
 
   <include package=".browser" />
 
   <genericsetup:registerProfile
     name="default"
-    title="tx.slider"
+    title="TX Slider"
     directory="profiles/default"
-    description='Install tx.slider'
+    description='Add sliders to pages'
     provides="Products.GenericSetup.interfaces.EXTENSION"
-    for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+    />
 
   <genericsetup:registerProfile
     name="uninstall"
-    title="tx.slider uninstall"
+    title="Uninstall TX Slider"
     directory="profiles/uninstall"
-    description="Removes tx.slider"
+    description="Removes tx.slider add-on"
     provides="Products.GenericSetup.interfaces.EXTENSION"
-    for="Products.CMFPlone.interfaces.IPloneSiteRoot" />
+    />
 
   <include file="upgrades.zcml" />
 

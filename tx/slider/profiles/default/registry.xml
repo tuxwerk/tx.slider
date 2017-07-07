@@ -1,12 +1,17 @@
 <?xml version="1.0"?>
 <registry>
-  <records interface="tx.slider.configlet.ISliderControlPanelSchema">
-    <value key="configuration">
-      <element>Default:default:1000:400</element>
+  <records interface="tx.slider.configlet.ISliderControlPanel">
+    <value key="configuration" purge="false">
+      <element>Default:tx-slider-default:1000:400</element>
+      <element>Square:tx-slider-square:1000:1000</element>
     </value>
-    <value key="effect">scrollHorz</value>
-    <value key="speed">800</value>
-    <value key="pause">4000</value>
-    <value key="navigation_type">arrows</value>
+    <value key="slide_configuration" purge="false">
+      <element>Important:tx-slide-important</element>
+    </value>
+    <value key="effect" purge="false">scrollHorz</value>
+    <value key="speed" purge="false">800</value>
+    <value key="pause" purge="false">4000</value>
+    <value key="navigation_type" purge="false">arrows</value>
+    <value key="image_scale_width" purge="false">1200</value>
   </records>
 </registry>

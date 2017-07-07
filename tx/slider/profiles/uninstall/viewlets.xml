@@ -10,7 +10,4 @@
   <order manager="plone.belowcontent">
     <viewlet name="tx.slider.belowcontent" remove="True" />
   </order>
-  <order manager="plone.htmlhead.links">
-    <viewlet name="tx.slider.head" remove="True" />
-  </order>
 </object>

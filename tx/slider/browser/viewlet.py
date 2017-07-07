@@ -5,7 +5,6 @@ from plone.memoize.instance import memoize
 
 from tx.slider.settings import PageSliderSettings
 from tx.slider.interfaces import ISliderPage
-from tx.slider.browser.base import AbstractSliderView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from zope.component import getUtility
@@ -30,15 +29,16 @@ class BaseSliderViewlet(ViewletBase):
 
     @memoize
     def registry(self, key):
-        return getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanelSchema.' + key]
+        return getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanel.' + key]
 
     @memoize
     def configuration(self):
         configs = self.registry('configuration')
         for config in configs:
             t = config.split(":")
-            if t[0] == self.settings.configuration:
+            if t[1] == self.settings.configuration:
                 return t
+        return configs[0].split(":")
     
     @memoize
     def show(self):
@@ -63,29 +63,14 @@ class BaseSliderViewlet(ViewletBase):
         c = self.configuration()
         if c:
             return c[1]
-        return "default"
 
-    @memoize
-    def ratio(self):
-        c = self.configuration()
-        if c:
-            return c[2] + ":" + c[3]
-        return "1000:400"
-
-    @memoize
-    def padding(self):
-        c = self.configuration()
-        if c:
-            return str( (float(c[3]) / float(c[2])) * 100 )
-        return str( (400.0 / 1000.0) * 100 )
-                
     @memoize
     def effect(self):
         return self.settings.effect or self.registry('effect')
                 
     @memoize
     def randomize(self):
-        return self.settings.randomize
+        return str(self.settings.randomize).lower()
 
     @memoize
     def speed(self):
@@ -146,15 +131,3 @@ class SliderBelowContent(BaseSliderViewlet):
         else:
             return ""
     
-class SliderHead(BaseSliderViewlet, AbstractSliderView):
-
-    index = ViewPageTemplateFile('templates/headviewlet.pt')
-
-    def is_enabled(self):
-        return self.show()
-
-    def render(self):
-        if self.is_enabled():
-            return super(SliderHead, self).render()
-        else:
-            return ""

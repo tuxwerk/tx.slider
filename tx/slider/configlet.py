@@ -22,7 +22,7 @@ from z3c.form import form
 from zope.component import getUtility
 from plone.registry.interfaces import IRegistry
 
-def navigation_type_choices(context):
+def slider_navigation_type_choices(context):
     return SimpleVocabulary([
         SimpleTerm(title=_(u"Arrows"),  value='arrows'),
         SimpleTerm(title=_(u"Bullets"), value='bullets'),
@@ -30,7 +30,7 @@ def navigation_type_choices(context):
         SimpleTerm(title=_(u"None"),    value='none'),
     ])
 
-def effect_choices(context):
+def slider_effect_choices(context):
     return SimpleVocabulary([
         SimpleTerm(title=_(u"Horizontal"), value='scrollHorz'),
         SimpleTerm(title=_(u"Vertical"),   value='scrollVert'),
@@ -38,25 +38,41 @@ def effect_choices(context):
         SimpleTerm(title=_(u"Tile blind"), value='tileBlind')
     ])
 
-def configuration_choices(context):
-    configs = getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanelSchema.configuration']
-    items = ()
+def slider_configuration_choices(context):
+    configs = getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanel.configuration']
+    items = []
     for config in configs:
-        t = config.split(":")[0]
-        items = ((t,t),) + items
-    return SimpleVocabulary.fromItems(items)
+        t = config.split(":")
+        items = items + [(t[1],t[0]),]
+    terms = [ SimpleTerm(value=pair[0], token=pair[0], title=pair[1]) for pair in items ]
+    return SimpleVocabulary(terms)
 
-class ISliderControlPanelSchema(Interface):
+def slide_configuration_choices(context):
+    configs = getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanel.slide_configuration']
+    items = []
+    for config in configs:
+        t = config.split(":")
+        items = items + [(t[1],t[0]),]
+    terms = [ SimpleTerm(value=pair[0], token=pair[0], title=pair[1]) for pair in items ]
+    return SimpleVocabulary(terms)
+
+class ISliderControlPanel(Interface):
     """
     The actual slider settings
     """
 
     configuration = schema.List(
         title=_(u'Configuration'),
-        description=_(u"Enter one configuration per line. Format: 'Name:css-class-name:width:height'. css-class-name will be prefixed with 'tx-slider-'. Uploaded images will be scaled down to width."),
-        default=[u"Default:default:1000:400",],
+        description=_(u"Enter one configuration per line. Format: 'Name:css-class-name:width:height'."),
         value_type=schema.TextLine(),
         required=True
+    )
+
+    slide_configuration = schema.List(
+        title=_(u'Slide configuration'),
+        description=_(u"Additional configuration for individual slides. Format: 'Name:css-class-name'."),
+        value_type=schema.TextLine(),
+        required=False
     )
 
     effect = schema.Choice(
@@ -88,11 +104,18 @@ class ISliderControlPanelSchema(Interface):
         default     = "arrows",
         required    = True        
     )
+
+    image_scale_width = schema.Int(
+        title=_(u"Image scale width"),
+        description=_(u"All uploaded images will be scaled down to this value."),
+        default=1200,
+        required=True
+    )
     
 class ControlPanelForm(RegistryEditForm):
 
     form.extends(RegistryEditForm)
-    schema = ISliderControlPanelSchema
+    schema = ISliderControlPanel
     label = _(u"Slider default settings")
     description = _(u'Default settings to use for all sliders.')
     

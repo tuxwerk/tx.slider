@@ -64,8 +64,6 @@ class TestSetup(BaseTest):
         storage = queryUtility(IViewletSettingsStorage)
         self.failUnless('tx.slider' in
                         storage.getOrder('plone.belowcontenttitle', None))
-        self.failUnless('tx.slider.head' in
-                        storage.getOrder('plone.htmlhead.links', None))
         self.failUnless('tx.slider' in
                         storage.getOrder('plone.belowcontent', None))
 
@@ -74,8 +72,6 @@ class TestSetup(BaseTest):
         storage = queryUtility(IViewletSettingsStorage)
         self.failUnless('tx.slider' not in
                         storage.getOrder('plone.belowcontenttitle', None))
-        self.failUnless('tx.slider.head' not in
-                        storage.getOrder('plone.htmlhead.links', None))
         self.failUnless('tx.slider' not in
                         storage.getOrder('plone.belowcontent', None))
 

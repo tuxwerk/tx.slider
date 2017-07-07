@@ -67,3 +67,11 @@
   max-width: 80%;
   padding: 10px;
 }
+
+.tx-slider-container.tx-slider-default {
+  padding-bottom: 40%;
+}
+
+.tx-slider-container.tx-slider-square {
+  padding-bottom: 100%;
+}

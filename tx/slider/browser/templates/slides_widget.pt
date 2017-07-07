@@ -1,12 +1,11 @@
-<div id="tx-slider-widget"
+<div id="tx-slider-widget" class=""
+     tal:attributes="class view/class_name;"
      xmlns="http://www.w3.org/1999/xhtml"
      xmlns:tal="http://xml.zope.org/namespaces/tal"
      xmlns:metal="http://xml.zope.org/namespaces/metal"
      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
      i18n:domain="tx.slider">
      
-  <style tal:content="structure view/css" type="text/css" />
-  
   <ul>
     <tal:repeat repeat="slide view/slides">
       <li tal:attributes="data-index slide/uuid">

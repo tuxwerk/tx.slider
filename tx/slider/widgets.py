@@ -1,14 +1,10 @@
 from zope.app.form.browser.widget import SimpleInputWidget
 from zope.app.form.browser.textwidgets import IntWidget
 
-#from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 try:
     from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 except ImportError:
     from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
-
-
-from tx.slider.utils import slider_settings_css
 
 
 class HiddenWidget(IntWidget):
@@ -25,7 +21,7 @@ class SlidesWidget(SimpleInputWidget):
     for each slide
     """
 
-    template = ViewPageTemplateFile('browser/templates/slides.pt')
+    template = ViewPageTemplateFile('browser/templates/slides_widget.pt')
 
     def __init__(self, field, request):
         SimpleInputWidget.__init__(self, field, request)
@@ -35,10 +31,9 @@ class SlidesWidget(SimpleInputWidget):
         self.portal_url = self.context.context.context.portal_url()
         # field/settings
         self.settings = self.context.context
-        # since this uses the same .pt file
-        self.css = slider_settings_css(self.settings)
         self.slides = self.settings.slides
-
+        self.class_name = self.settings.configuration
+        
     def __call__(self):
         return self.template(self)
 

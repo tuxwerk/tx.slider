@@ -77,13 +77,6 @@
     layer="tx.slider.interfaces.ISliderLayer"
     permission="zope2.View" />
         
-  <browser:viewlet
-    name="tx.slider.head"
-    manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-    class=".viewlet.SliderHead"
-    layer="tx.slider.interfaces.ISliderLayer"
-    permission="zope2.View" />
-  
   <adapter factory=".forms.AddSlideAdapter" />
 
   <browser:page

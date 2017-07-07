@@ -99,3 +99,19 @@ div#formfield-form-slides {
   border-right: 0;
   padding: 6px 0;
 }
+
+#tx-slider-widget li.sortable-placeholder,
+#tx-slider-widget ul li {
+  padding-bottom: 50%;
+}
+
+#tx-slider-widget.tx-slider-default li.sortable-placeholder,
+#tx-slider-widget.tx-slider-default ul li {
+  padding-bottom: 40%;
+}
+
+#tx-slider-widget.tx-slider-square li.sortable-placeholder,
+#tx-slider-widget.tx-slider-square ul li {
+  padding-bottom: 100%;
+}
+
