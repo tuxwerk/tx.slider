@@ -63,7 +63,7 @@ class ISliderControlPanel(Interface):
 
     configuration = schema.List(
         title=_(u'Configuration'),
-        description=_(u"Enter one configuration per line. Format: 'Name:css-class-name:width:height'."),
+        description=_(u"Enter one configuration per line. Format: 'Name:css-class-name'. First entry is default."),
         value_type=schema.TextLine(),
         required=True
     )

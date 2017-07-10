@@ -2,8 +2,8 @@
 <registry>
   <records interface="tx.slider.configlet.ISliderControlPanel">
     <value key="configuration" purge="false">
-      <element>Default:tx-slider-default:1000:400</element>
-      <element>Square:tx-slider-square:1000:1000</element>
+      <element>Default:tx-slider-default</element>
+      <element>Square:tx-slider-square</element>
     </value>
     <value key="slide_configuration" purge="false">
       <element>Important:tx-slide-important</element>

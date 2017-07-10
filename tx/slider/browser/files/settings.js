@@ -1,9 +1,8 @@
 function tx_slide_remove() {
-  if (!window.confirm("Are you sure you want to remove this slide?"))
+  if (!window.confirm($(this).attr('data-confirm-text')))
     return false;
 
-  $.get($(this).attr('href') + '?ajax=true', {}, function(data, status) {
-  });
+  $.get($(this).attr('href') + '?ajax=true', {}, function(data, status) { });
   $(this).closest("li").remove();
   return false;
 }

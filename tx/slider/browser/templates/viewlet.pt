@@ -7,13 +7,15 @@
   <div class="tx-slider-container"
        tal:attributes="class string:tx-slider-container tx-slider-${uid} ${view/class_name};"
        i18n:domain="tx.slider">
-    <div tal:omit-tag="hide_arrows" class="cycle-next"></div>
-    <div tal:omit-tag="hide_arrows" class="cycle-prev"></div>
+    <div tal:omit-tag="hide_arrows" class="cycle-next" />
+    <div tal:omit-tag="hide_arrows" class="cycle-prev" />
     <div tal:attributes="data-cycle-fx      view/effect;
 			 data-cycle-random  view/randomize;
 			 data-cycle-speed   view/speed;
 			 data-cycle-timeout view/pause;
 			 data-cycle-loop    continuous;
+			 data-cycle-prev    string:.tx-slider-${uid} .cycle-prev;
+			 data-cycle-next    string:.tx-slider-${uid} .cycle-next;
 			 "
 	 class="cycle-slideshow"
 	 data-cycle-auto-height="0"
@@ -31,22 +33,23 @@
 	 data-cycle-swipe="true"
 	 data-cycle-prev=".tx-slider-container .cycle-prev"
 	 data-cycle-next=".tx-slider-container .cycle-next"
-	 data-cycle-slides="> div.slide"
+	 data-cycle-slides="> div.tx-slide"
 	 data-off-cycle-pager-template="<span>{{slideNum}}</span>"
 	 >
-      <div tal:omit-tag="hide_pager" class="cycle-pager"></div>
+      <div tal:omit-tag="hide_pager" class="cycle-pager" />
       <tal:repeat repeat="slide view/slides">
-	<div class="slide">
-	  <a href="" tal:attributes="href string:${context/portal_url}${slide/link_reference}">
-	    <tal:if tal:condition="slide/image_type">
-              <img tal:attributes="src string:${view/absolute_url}/@@tx-slides/${slide/uuid}/@@image;" />
-	    </tal:if>
-	    <tal:if tal:condition="slide/html">
-	      <div class="cycle-overlay" tal:content="structure slide/html">
-		Content
-	      </div>
-	    </tal:if>
-	  </a
+	<div class="tx-slide"
+	     tal:attributes="class string:tx-slide ${slide_class}"
+	     tal:define="show_link   python: slide.get('url') or slide.get('link_reference');
+			 slide_class python: slide.get('configuration') or '';
+			 link        python: slide.get('url') or view.portal_url + (slide.get('link_reference') or '')">
+	  <a href="" tal:attributes="href link" tal:omit-tag="not:show_link">
+            <img tal:attributes="src string:${view/absolute_url}/@@tx-slides/${slide/uuid}/@@image;" tal:condition="slide/image_type" />
+	    <div class="cycle-overlay tx-slide-content">
+	      <h2 class="tx-slide-heading" tal:content="slide/heading" tal:condition="slide/heading" />
+	      <div class="tx-slide-text" tal:content="structure slide/html" tal:condition="slide/html" />
+	    </div>
+	  </a>
 	</div>
       </tal:repeat>
     </div>

@@ -5,12 +5,12 @@
   margin-top: 1em;
   height: 0;
 }
-.tx-slider-container div.slide {
+.tx-slider-container div.tx-slide {
   min-width: 100%;
   max-width: 100%;
   width: 100%;
 }
-.tx-slider-container div.slide img {
+.tx-slider-container div.tx-slide img {
   min-width: 100%;
   max-width: 100%;
   width: 100%;
@@ -74,4 +74,8 @@
 
 .tx-slider-container.tx-slider-square {
   padding-bottom: 100%;
+}
+
+.tx-slider-container .tx-slide-important {
+  font-size: 150%;
 }

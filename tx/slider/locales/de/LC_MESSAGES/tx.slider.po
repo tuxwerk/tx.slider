@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tx.slider\n"
-"POT-Creation-Date: 2017-07-07 17:47+0000\n"
+"POT-Creation-Date: 2017-07-10 08:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: CMS HU Berlin <plone@cms.hu-berlin.de>\n"
 "Language-Team: CMS HU Berlin <plone@cms.hu-berlin.de>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #: ./configure.zcml:51
 msgid "Add sliders to pages"
-msgstr ""
+msgstr "Slider zu Seiten hinzufügen"
 
 #: ./browser/forms.py:127
 msgid "Add/Update Slide"
@@ -24,11 +24,15 @@ msgstr "Slide hinzufügen/editieren"
 
 #: ./configlet.py:73
 msgid "Additional configuration for individual slides. Format: 'Name:css-class-name'."
-msgstr ""
+msgstr "Zusätzliche Konfigurationen für einzelne Slides. Format: 'Name:css-class-name'."
 
 #: ./configlet.py:110
 msgid "All uploaded images will be scaled down to this value."
-msgstr ""
+msgstr "Alle Bilder werden auf folgende Breite skaliert."
+
+#: ./browser/templates/slides_widget.pt:34
+msgid "Are you sure you want to remove this slide?"
+msgstr "Wollen Sie den Slide wirklich entfernen?"
 
 #: ./configlet.py:27
 msgid "Arrows"
@@ -64,15 +68,15 @@ msgstr "Änderungen gespeichert."
 
 #: ./interfaces.py:168
 msgid "Choose a content item to link this slide to."
-msgstr "Bitte einen Inhalt wählen, der mit diesem Slider verknüpft wird."
+msgstr "Einen Inhalt wählen, der mit diesem Slide verknüpft wird."
 
 #: ./interfaces.py:62
 msgid "Choose a layout for all sliders."
-msgstr ""
+msgstr "Ein Layout für alle Slides wählen."
 
 #: ./interfaces.py:147
 msgid "Choose a layout for this slide."
-msgstr ""
+msgstr "Ein Layout für diesen Slide wählen."
 
 #: ./configlet.py:65
 msgid "Configuration"
@@ -108,16 +112,16 @@ msgid "Effect"
 msgstr "Effekt"
 
 #: ./configlet.py:66
-msgid "Enter one configuration per line. Format: 'Name:css-class-name:width:height'."
-msgstr ""
+msgid "Enter one configuration per line. Format: 'Name:css-class-name'. First entry is default."
+msgstr "Eine Konfiguration pro Zeile. Format: 'Name:css-class-name'. Erster Eintrag ist Standard-Einstellung."
 
 #: ./interfaces.py:174
 msgid "External link"
-msgstr ""
+msgstr "Externer Link"
 
 #: ./interfaces.py:152
 msgid "Heading"
-msgstr ""
+msgstr "Überschrift"
 
 #: ./configlet.py:35
 msgid "Horizontal"
@@ -133,11 +137,11 @@ msgstr "Bild"
 
 #: ./configlet.py:109
 msgid "Image scale width"
-msgstr ""
+msgstr "Bild-Skalierungs Breite"
 
 #: ./interfaces.py:146
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: ./interfaces.py:76
 msgid "Leave on 'no choice' for default effect."
@@ -178,7 +182,7 @@ msgstr "Bitte die Standard Navigation wählen."
 
 #: ./interfaces.py:175
 msgid "Please enter a full URL. Has precedence before the above field."
-msgstr ""
+msgstr "Bitte einen volständigen Link angeben. Hat Vorrang vor dem obigen Feld."
 
 #: ./interfaces.py:130
 msgid "Portal top"
@@ -190,7 +194,7 @@ msgstr "Zufällige Reihenfolge der Slides"
 
 #: ./configure.zcml:59
 msgid "Removes tx.slider add-on"
-msgstr ""
+msgstr "Entfernt die tx.slider Erweiterung"
 
 #: ./browser/forms.py:129
 msgid "Save"
@@ -210,7 +214,7 @@ msgstr "Slider anzeigen"
 
 #: ./configlet.py:72
 msgid "Slide configuration"
-msgstr ""
+msgstr "Konfiguration einzelner Slides"
 
 #: ./browser/forms.py:215
 msgid "Slider Settings"
@@ -222,7 +226,7 @@ msgstr "Slider-Einstellungen"
 
 #: ./interfaces.py:61
 msgid "Slider layout"
-msgstr ""
+msgstr "Slider-Layout"
 
 #: ./interfaces.py:127
 msgid "Slider position"
@@ -248,7 +252,7 @@ msgstr "Geschwindigkeit der Slide-Übergänge (in Millisekunden). '0' für Vorei
 
 #: ./configure.zcml:51
 msgid "TX Slider"
-msgstr ""
+msgstr "TX Slider"
 
 #: ./interfaces.py:162
 msgid "Text"
@@ -273,12 +277,20 @@ msgstr "Abwählen um den Slider zu verstecken."
 
 #: ./configure.zcml:59
 msgid "Uninstall TX Slider"
-msgstr ""
+msgstr "TX Slider deinstallieren"
 
 #: ./configlet.py:36
 msgid "Vertical"
 msgstr "Vertikal"
 
-#: ./browser/templates/slides_widget.pt:39
+#: ./browser/templates/slides_widget.pt:47
 msgid "add new slide"
 msgstr "Neues Slide hinzufügen"
+
+#: ./browser/templates/slides_widget.pt:28
+msgid "edit slide"
+msgstr "Slide bearbeiten"
+
+#: ./browser/templates/slides_widget.pt:34
+msgid "remove slide"
+msgstr "Slide entfernen"

@@ -8,26 +8,34 @@
      
   <ul>
     <tal:repeat repeat="slide view/slides">
-      <li tal:attributes="data-index slide/uuid">
-	<div class="slide-wrapper">
-	  <div class="slider-container">
-            <div class="slide">
-	      <tal:if tal:condition="slide/html">
-		<div class="slide-text" tal:content="structure slide/html" />
-	      </tal:if>
-	      <tal:if tal:condition="slide/image_type">
-		<img class="slide-image" alt="" tal:attributes="src string:${view/slider_url}/@@tx-slides/${slide/uuid}/@@image" />
-	      </tal:if>		
-	    </div>
+      <li tal:attributes="data-index slide/uuid"
+	  tal:define="show_link python: slide.get('url') or slide.get('link_reference');
+                      link python: slide.get('url') or view.portal_url + str(slide.get('link_reference') or '')">
+        <div class="tx-slide">
+          <div class="tx-slide-content">
+	    <h2 class="tx-slide-heading" tal:content="slide/heading" tal:condition="slide/heading" />
+	    <div class="tx-slide-text" tal:content="structure slide/html" tal:condition="slide/html" />
 	  </div>
-	  <div class="slide-buttons">
-            <a class="slide-link" tal:attributes="href string:${view/portal_url}${slide/link_reference}" target="_blank">
+	  <img class="slide-image" alt="" tal:attributes="src string:${view/slider_url}/@@tx-slides/${slide/uuid}/@@image"  tal:condition="slide/image_type" />
+	  <div class="tx-slide-buttons">
+            <a class="tx-slide-link"
+	       title=""
+               target="_blank"
+	       tal:attributes="href link;
+                               title link;">
 	      <img tal:attributes="src string:${view/portal_url}/link_icon.png"/>
 	    </a>
-            <a class="slide-edit" tal:attributes="href string:${view/slider_url}/@@tx-slider-edit?index=${slide/uuid}">
+            <a class="tx-slide-edit"
+	       title="edit slide"
+	       tal:attributes="href string:${view/slider_url}/@@tx-slider-edit?index=${slide/uuid}"
+	       i18n:attributes="title;">
 	      <img tal:attributes="src string:${view/portal_url}/edit.png"/>
 	    </a>
-            <a class="slide-remove" tal:attributes="href string:${view/slider_url}/@@tx-slides/${slide/uuid}/@@remove-slide" >
+            <a class="tx-slide-remove"
+	       data-confirm-text="Are you sure you want to remove this slide?"
+               title="remove slide"
+	       tal:attributes="href string:${view/slider_url}/@@tx-slides/${slide/uuid}/@@remove-slide"
+	       i18n:attributes="data-confirm-text; title;">
 	      <img tal:attributes="src string:${view/portal_url}/delete_icon.png"/>
 	    </a>
 	  </div>
@@ -35,7 +43,7 @@
       </li>
     </tal:repeat>
   </ul>
-  <div class="slide-add-buttons">
-    <a class="slide-add" tal:attributes="href string:${view/slider_url}/@@tx-slider-edit" i18n:translate="">add new slide</a>
+  <div class="tx-slide-add-buttons">
+    <a class="tx-slide-add" tal:attributes="href string:${view/slider_url}/@@tx-slider-edit" i18n:translate="">add new slide</a>
   </div>
 </div>

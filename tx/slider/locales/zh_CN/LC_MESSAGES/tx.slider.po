@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tx.slider\n"
-"POT-Creation-Date: 2017-07-07 17:47+0000\n"
+"POT-Creation-Date: 2017-07-10 08:32+0000\n"
 "PO-Revision-Date: 2012-10-25 21:02+0800\n"
 "Last-Translator: Jian Aijun <jianaijun@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sf.net>\n"
@@ -31,6 +31,10 @@ msgstr ""
 
 #: ./configlet.py:110
 msgid "All uploaded images will be scaled down to this value."
+msgstr ""
+
+#: ./browser/templates/slides_widget.pt:34
+msgid "Are you sure you want to remove this slide?"
 msgstr ""
 
 #: ./configlet.py:27
@@ -111,7 +115,7 @@ msgid "Effect"
 msgstr ""
 
 #: ./configlet.py:66
-msgid "Enter one configuration per line. Format: 'Name:css-class-name:width:height'."
+msgid "Enter one configuration per line. Format: 'Name:css-class-name'. First entry is default."
 msgstr ""
 
 #: ./interfaces.py:174
@@ -282,6 +286,14 @@ msgstr ""
 msgid "Vertical"
 msgstr ""
 
-#: ./browser/templates/slides_widget.pt:39
+#: ./browser/templates/slides_widget.pt:47
 msgid "add new slide"
 msgstr "添加新 slide"
+
+#: ./browser/templates/slides_widget.pt:28
+msgid "edit slide"
+msgstr ""
+
+#: ./browser/templates/slides_widget.pt:34
+msgid "remove slide"
+msgstr ""
