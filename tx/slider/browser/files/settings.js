@@ -40,7 +40,7 @@ function tx_slide_sortable() {
 }
 
 $(document).ready(function(){
-  $("#tx-slider-widget a.slide-remove").click(tx_slide_remove);
+  $("#tx-slider-widget a.tx-slide-remove").click(tx_slide_remove);
   tx_slide_sortable();
   // $('.slide-buttons a.slide-edit, .slide-add-buttons a.slide-add').prepOverlay({
   //   subtype: 'ajax',

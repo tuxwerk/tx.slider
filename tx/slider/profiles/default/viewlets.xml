@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 
 <object>
-    <order manager="plone.portaltop">
-      <viewlet name="tx.slider.portaltop" insert-after="*" />
+    <order manager="plone.portaltop" skinname="*">
+      <viewlet name="tx.slider.portaltop" />
     </order>
-    <order manager="plone.belowcontenttitle">
-      <viewlet name="tx.slider.belowcontenttitle" insert-after="*" />
+    <order manager="plone.belowcontenttitle" skinname="*">
+      <viewlet name="tx.slider.belowcontenttitle" />
     </order>
-    <order manager="plone.belowcontent">
-      <viewlet name="tx.slider.belowcontent" insert-after="*" />
+    <order manager="plone.belowcontent" skinname="*">
+      <viewlet name="tx.slider.belowcontent" />
     </order>
 </object>

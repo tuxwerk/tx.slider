@@ -1,17 +1,16 @@
 from Products.CMFCore.utils import getToolByName
-from tx.slider.testing import \
-    Slider_INTEGRATION_TESTING, \
-    Slider_FUNCTIONAL_TESTING
+from tx.slider.testing import SLIDER_INTEGRATION_TESTING, SLIDER_FUNCTIONAL_TESTING
 from plone.app.testing import setRoles
 import unittest
 from plone.app.testing import TEST_USER_ID
 from tx.slider.interfaces import ISliderLayer
 from zope.interface import alsoProvides
+from Testing.ZopeTestCase import Functional
 
 
 class BaseTest(unittest.TestCase):
 
-    layer = Slider_INTEGRATION_TESTING
+    layer = SLIDER_INTEGRATION_TESTING
 
     def setUp(self):
         self.portal = self.layer['portal']
@@ -36,5 +35,6 @@ class BaseTest(unittest.TestCase):
                 type_name=type_name, id=id)]
 
 
-class BaseFunctionalTest(BaseTest):
-    layer = Slider_FUNCTIONAL_TESTING
+class BaseFunctionalTest(BaseTest, Functional):
+
+    layer = SLIDER_FUNCTIONAL_TESTING

@@ -30,11 +30,11 @@ class Slider(PloneSandboxLayer):
         workflowTool.setDefaultChain('plone_workflow')
 
 
-Slider_FIXTURE = Slider()
-Slider_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(Slider_FIXTURE,), name="Slider:Integration")
-Slider_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(Slider_FIXTURE,), name="Slider:Functional")
+SLIDER_FIXTURE = Slider()
+SLIDER_INTEGRATION_TESTING = IntegrationTesting(
+    bases=(SLIDER_FIXTURE,), name="Slider:Integration")
+SLIDER_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(SLIDER_FIXTURE,), name="Slider:Functional")
 
 
 def browserLogin(portal, browser, username=None, password=None):
