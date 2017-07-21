@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tx.slider\n"
-"POT-Creation-Date: 2017-07-10 08:32+0000\n"
+"POT-Creation-Date: 2017-07-21 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: CMS HU Berlin <plone@cms.hu-berlin.de>\n"
 "Language-Team: CMS HU Berlin <plone@cms.hu-berlin.de>\n"
@@ -23,8 +23,8 @@ msgid "Add/Update Slide"
 msgstr "Slide hinzufügen/editieren"
 
 #: ./configlet.py:73
-msgid "Additional configuration for individual slides. Format: 'Name:css-class-name'."
-msgstr "Zusätzliche Konfigurationen für einzelne Slides. Format: 'Name:css-class-name'."
+msgid "Additional configuration for individual slides. Format: 'Name|css-class-name'."
+msgstr "Zusätzliche Konfigurationen für einzelne Slides. Format: 'Name|css-class-name'."
 
 #: ./configlet.py:110
 msgid "All uploaded images will be scaled down to this value."
@@ -112,8 +112,8 @@ msgid "Effect"
 msgstr "Effekt"
 
 #: ./configlet.py:66
-msgid "Enter one configuration per line. Format: 'Name:css-class-name'. First entry is default."
-msgstr "Eine Konfiguration pro Zeile. Format: 'Name:css-class-name'. Erster Eintrag ist Standard-Einstellung."
+msgid "Enter one configuration per line. Format: 'Name|css-class-name'. First entry is default."
+msgstr "Eine Konfiguration pro Zeile. Format: 'Name|css-class-name'. Erster Eintrag ist Standard-Einstellung."
 
 #: ./interfaces.py:174
 msgid "External link"

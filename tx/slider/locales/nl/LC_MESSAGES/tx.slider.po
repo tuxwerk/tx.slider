@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-07-10 08:32+0000\n"
+"POT-Creation-Date: 2017-07-21 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgid "Add/Update Slide"
 msgstr ""
 
 #: ./configlet.py:73
-msgid "Additional configuration for individual slides. Format: 'Name:css-class-name'."
+msgid "Additional configuration for individual slides. Format: 'Name|css-class-name'."
 msgstr ""
 
 #: ./configlet.py:110
@@ -116,7 +116,7 @@ msgid "Effect"
 msgstr ""
 
 #: ./configlet.py:66
-msgid "Enter one configuration per line. Format: 'Name:css-class-name'. First entry is default."
+msgid "Enter one configuration per line. Format: 'Name|css-class-name'. First entry is default."
 msgstr ""
 
 #: ./interfaces.py:174

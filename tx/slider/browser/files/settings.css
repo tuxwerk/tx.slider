@@ -100,9 +100,19 @@ div#formfield-form-slides {
   padding-bottom: 50%;
 }
 
-#tx-slider-widget.tx-slider-default li.sortable-placeholder,
-#tx-slider-widget.tx-slider-default ul li {
-  padding-bottom: 40%;
+#tx-slider-widget.tx-slider-16-9 li.sortable-placeholder,
+#tx-slider-widget.tx-slider-16-9 ul li {
+  padding-bottom: 56.25%;
+}
+
+#tx-slider-widget.tx-slider-2-1 li.sortable-placeholder,
+#tx-slider-widget.tx-slider-2-1 ul li {
+  padding-bottom: 50%;
+}
+
+#tx-slider-widget.tx-slider-4-3 li.sortable-placeholder,
+#tx-slider-widget.tx-slider-4-3 ul li {
+  padding-bottom: 75%;
 }
 
 #tx-slider-widget.tx-slider-square li.sortable-placeholder,

@@ -67,8 +67,16 @@
   padding: 10px;
 }
 
-.tx-slider-container.tx-slider-default {
-  padding-bottom: 40%;
+.tx-slider-container.tx-slider-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.tx-slider-container.tx-slider-2-1 {
+  padding-bottom: 50%;
+}
+
+.tx-slider-container.tx-slider-4-3 {
+  padding-bottom: 75%;
 }
 
 .tx-slider-container.tx-slider-square {

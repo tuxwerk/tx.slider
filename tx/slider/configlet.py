@@ -42,7 +42,7 @@ def slider_configuration_choices(context):
     configs = getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanel.configuration']
     items = []
     for config in configs:
-        t = config.split(":")
+        t = config.split("|")
         items = items + [(t[1],t[0]),]
     terms = [ SimpleTerm(value=pair[0], token=pair[0], title=pair[1]) for pair in items ]
     return SimpleVocabulary(terms)
@@ -51,7 +51,7 @@ def slide_configuration_choices(context):
     configs = getUtility(IRegistry)['tx.slider.configlet.ISliderControlPanel.slide_configuration']
     items = []
     for config in configs:
-        t = config.split(":")
+        t = config.split("|")
         items = items + [(t[1],t[0]),]
     terms = [ SimpleTerm(value=pair[0], token=pair[0], title=pair[1]) for pair in items ]
     return SimpleVocabulary(terms)
@@ -63,14 +63,14 @@ class ISliderControlPanel(Interface):
 
     configuration = schema.List(
         title=_(u'Configuration'),
-        description=_(u"Enter one configuration per line. Format: 'Name:css-class-name'. First entry is default."),
+        description=_(u"Enter one configuration per line. Format: 'Name|css-class-name'. First entry is default."),
         value_type=schema.TextLine(),
         required=True
     )
 
     slide_configuration = schema.List(
         title=_(u'Slide configuration'),
-        description=_(u"Additional configuration for individual slides. Format: 'Name:css-class-name'."),
+        description=_(u"Additional configuration for individual slides. Format: 'Name|css-class-name'."),
         value_type=schema.TextLine(),
         required=False
     )

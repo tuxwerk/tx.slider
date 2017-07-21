@@ -2,11 +2,13 @@
 <registry>
   <records interface="tx.slider.configlet.ISliderControlPanel">
     <value key="configuration" purge="false">
-      <element>Default:tx-slider-default</element>
-      <element>Square:tx-slider-square</element>
+      <element>16:9|tx-slider-16-9</element>
+      <element>2:1|tx-slider-2-1</element>
+      <element>4:3|tx-slider-4-3</element>
+      <element>Square|tx-slider-square</element>
     </value>
     <value key="slide_configuration" purge="false">
-      <element>Important:tx-slide-important</element>
+      <element>Important|tx-slide-important</element>
     </value>
     <value key="effect" purge="false">scrollHorz</value>
     <value key="speed" purge="false">800</value>
