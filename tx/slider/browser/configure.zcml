@@ -21,7 +21,7 @@
     for="tx.slider.interfaces.ISliderPage"
     class=".forms.SliderPageSettingsForm"
     layer="tx.slider.interfaces.ISliderLayer"
-    permission="tx.slider.ManageSliderSettings" />
+    permission="tx.slider.EditSlider" />
     
   <browser:page
     name="image"
@@ -33,7 +33,7 @@
   <browser:page 
     name="tx-slider-enable"
     for="*"
-    permission="tx.slider.ManageSliderSettings"
+    permission="tx.slider.AddSlider"
     allowed_interface="tx.slider.interfaces.ISliderUtilProtected"
     attribute="enable"
     layer="tx.slider.interfaces.ISliderLayer"
@@ -42,7 +42,7 @@
   <browser:page 
     name="tx-slider-disable"
     for="*"
-    permission="tx.slider.ManageSliderSettings"
+    permission="tx.slider.AddSlider"
     allowed_interface="tx.slider.interfaces.ISliderUtilProtected"
     attribute="disable"
     layer="tx.slider.interfaces.ISliderLayer"
@@ -84,21 +84,21 @@
     for="tx.slider.interfaces.ISliderPage"
     class=".forms.AddSlideForm"
     layer="tx.slider.interfaces.ISliderLayer"
-    permission="tx.slider.ManageSliderSettings" />
+    permission="tx.slider.EditSlider" />
   
   <browser:page
     name="remove-slide"
     for="tx.slider.interfaces.ISlideContext"
     class=".views.RemoveSlideView"
     layer="tx.slider.interfaces.ISliderLayer"
-    permission="tx.slider.ManageSliderSettings" />
+    permission="tx.slider.EditSlider" />
 
   <browser:page
     name="order-slides"
     for="tx.slider.interfaces.ISlideContext"
     class=".views.OrderSlides"
     layer="tx.slider.interfaces.ISliderLayer"
-    permission="tx.slider.ManageSliderSettings" />
+    permission="tx.slider.EditSlider" />
 
   <browser:page
     name="tx-slides"

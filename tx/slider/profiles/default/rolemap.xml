@@ -1,8 +1,15 @@
 <?xml version="1.0"?>
 <rolemap>
   <permissions>
-    <permission name="tx.slider: Manage slider settings"
-                acquire="True">
+    <permission name="tx.slider: Manage slider settings" acquire="True">
+      <role name="Site Administrator"/>
+    </permission>
+    <permission name="tx.slider: Edit slider" acquire="True">
+      <role name="Editor"/>
+      <role name="Site Administrator"/>
+    </permission>
+    <permission name="tx.slider: Add slider" acquire="True">
+      <role name="Editor"/>
       <role name="Site Administrator"/>
     </permission>
   </permissions>

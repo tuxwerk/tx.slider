@@ -19,10 +19,14 @@
   </configure>
 
   <!-- permission for managing slideshow settings -->
-  <permission
-    id="tx.slider.ManageSliderSettings"
-    title="tx.slider: Manage slider settings"
-    />
+  <permission id="tx.slider.ManageSliderSettings"
+    title="tx.slider: Manage slider settings"/>
+
+  <permission id="tx.slider.EditSlider"
+    title="tx.slider: Edit slider"/>
+
+  <permission id="tx.slider.AddSlider"
+    title="tx.slider: Add slider"/>
 
   <utility provides="zope.schema.interfaces.IVocabularyFactory"
              component=".configlet.slider_navigation_type_choices"
@@ -64,7 +68,7 @@
     name="tx-slider-controlpanel"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
     class=".configlet.ControlPanel"
-    permission="plone.app.controlpanel.Site"
+    permission="tx.slider.ManageSliderSettings"
     />
 
 </configure>

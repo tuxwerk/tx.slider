@@ -5,19 +5,19 @@
     <action title="Add slider" action_id="enable_slider" category="object_buttons"
             condition_expr="not: object/@@slider_util/enabled_here"
             url_expr="string:${object_url}/@@tx-slider-enable" visible="True">
-      <permission>tx.slider: Manage slider settings</permission>
+      <permission>tx.slider: Add slider</permission>
     </action>
 
     <action title="Remove slider" action_id="disable_slider" category="object_buttons"
             condition_expr="object/@@slider_util/enabled_here"
             url_expr="string:${object_url}/@@tx-slider-disable" visible="True">
-      <permission>tx.slider: Manage slider settings</permission>
+      <permission>tx.slider: Add slider</permission>
     </action>
 
     <action title="Slider" action_id="slider_settings" category="object"
             condition_expr="object/@@slider_util/enabled_here"
             url_expr="string:${object_url}/@@tx-slider-settings" visible="True">
-      <permission>tx.slider: Manage slider settings</permission>
+      <permission>tx.slider: Edit slider</permission>
     </action>
     
   </action-provider>
