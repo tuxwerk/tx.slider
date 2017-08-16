@@ -1,7 +1,7 @@
 
 Introduction
 ============
-This product allows you to add slideshows to any page on a plone site. It is based on the cycle2 jquery library: http://malsup.com/jquery/cycle2/
+This product allows you to add slideshows to any page on a plone (version 4.3) site. It is based on the cycle2 jquery library: http://malsup.com/jquery/cycle2/
 
 How-to
 ------
