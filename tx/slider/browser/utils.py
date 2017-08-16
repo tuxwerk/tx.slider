@@ -11,6 +11,7 @@ from zope.component import getMultiAdapter
 from zope.annotation.interfaces import IAnnotations
 from Products.CMFCore.interfaces import ISiteRoot
 from tx.slider.settings import PageSliderSettings
+import copy
 
 class SliderUtilProtected(BrowserView):
     """
@@ -26,6 +27,14 @@ class SliderUtilProtected(BrowserView):
             self.request.response.redirect(self.context.absolute_url())
         else:            
             alsoProvides(self.context, ISliderPage)
+            canonical = self.context.getCanonical()
+            if self.context != canonical and ISliderPage.providedBy(canonical):
+                # we copy the fields from the translation original
+                annotations = IAnnotations(canonical)
+                settings = copy.deepcopy(annotations.get('tx.slider', {}))
+                settings['show'] = False
+                annotations_new = IAnnotations(self.context)
+                annotations_new['tx.slider'] = settings
             self.context.reindexObject(idxs=['object_provides'])
             utils.addPortalMessage("Slider added.")
             self.request.response.redirect('%s/@@tx-slider-settings' % (
