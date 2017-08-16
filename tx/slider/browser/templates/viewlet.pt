@@ -7,8 +7,8 @@
   <div class="tx-slider-container"
        tal:attributes="class string:tx-slider-container tx-slider-${uid} ${view/class_name};"
        i18n:domain="tx.slider">
-    <div tal:omit-tag="hide_arrows" class="cycle-next" />
-    <div tal:omit-tag="hide_arrows" class="cycle-prev" />
+    <div tal:omit-tag="hide_arrows" class="cycle-next"></div>
+    <div tal:omit-tag="hide_arrows" class="cycle-prev"></div>
     <div tal:attributes="data-cycle-fx      view/effect;
 			 data-cycle-random  view/randomize;
 			 data-cycle-speed   view/speed;
@@ -36,7 +36,7 @@
 	 data-cycle-slides="> div.tx-slide"
 	 data-off-cycle-pager-template="<span>{{slideNum}}</span>"
 	 >
-      <div tal:omit-tag="hide_pager" class="cycle-pager" />
+      <div tal:omit-tag="hide_pager" class="cycle-pager"></div>
       <tal:repeat repeat="slide view/slides">
 	<div class="tx-slide"
 	     tal:attributes="class string:tx-slide ${slide_class}"
@@ -46,8 +46,8 @@
 	  <a href="" tal:attributes="href link" tal:omit-tag="not:show_link">
             <img tal:attributes="src string:${view/absolute_url}/@@tx-slides/${slide/uuid}/@@image;" tal:condition="slide/image_type" />
 	    <div class="cycle-overlay tx-slide-content">
-	      <h2 class="tx-slide-heading" tal:content="slide/heading" tal:condition="slide/heading" />
-	      <div class="tx-slide-text" tal:content="structure slide/html" tal:condition="slide/html" />
+	      <h2 class="tx-slide-heading" tal:content="slide/heading" tal:condition="slide/heading"></h2>
+	      <div class="tx-slide-text" tal:content="structure slide/html" tal:condition="slide/html"></div>
 	    </div>
 	  </a>
 	</div>

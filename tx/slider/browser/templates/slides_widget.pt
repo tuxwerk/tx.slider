@@ -13,8 +13,8 @@
                       link python: slide.get('url') or view.portal_url + str(slide.get('link_reference') or '')">
         <div class="tx-slide">
           <div class="tx-slide-content">
-	    <h2 class="tx-slide-heading" tal:content="slide/heading" tal:condition="slide/heading" />
-	    <div class="tx-slide-text" tal:content="structure slide/html" tal:condition="slide/html" />
+	    <h2 class="tx-slide-heading" tal:content="slide/heading" tal:condition="slide/heading"></h2>
+	    <div class="tx-slide-text" tal:content="structure slide/html" tal:condition="slide/html"></div>
 	  </div>
 	  <img class="slide-image" alt="" tal:attributes="src string:${view/slider_url}/@@tx-slides/${slide/uuid}/@@image"  tal:condition="slide/image_type" />
 	  <div class="tx-slide-buttons">
