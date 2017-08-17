@@ -5,7 +5,25 @@ This product allows you to add slideshows to any page on a plone (version 4.3) s
 
 How-to
 ------
-On a page, click actions -> Add slider. This opens a setting page for your slides. Slides can be added by clicking ``add new slide``.
+On a page, click ``Actions`` -> ``Add slider``.
+
+.. image:: docs/images/add-slider.png
+   :width: 50%
+
+This opens a setting page for your slides. Slides can be added by clicking ``add new slide``.
+
+.. image:: docs/images/add-new-slide.png
+
+Access the slider configuration through the ``Slider`` tab.
+
+.. image:: docs/images/slider-configuration.png
+   :width: 50%
+
+The slides are rendered by viewlets (at portaltop, belowcontenttitle or belowcontent).
+	   
+.. image:: docs/images/view-slider.png
+   :width: 50%
+
 
 TODO
 ----
