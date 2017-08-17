@@ -73,7 +73,7 @@ class ISliderSettings(Interface):
     effect = schema.Choice(
         source="slider_effect_choices",
         title=_(u"Effect"),
-        description=_(u"Leave on 'no choice' for default effect."),
+        description=_(u"Leave on 'nothing selected' for default effect."),
         required=False
     )
 
@@ -100,7 +100,7 @@ class ISliderSettings(Interface):
     navigation_type = schema.Choice(
         source="slider_navigation_type_choices",
         title=_(u"Type of navigation"),
-        description=_(u"Leave on 'no choice' for default navigation type."),
+        description=_(u"Leave on 'nothing selected' for default navigation type."),
         required=False
     )
 
