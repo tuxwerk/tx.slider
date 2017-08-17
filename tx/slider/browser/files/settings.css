@@ -6,6 +6,7 @@
 
 #content #tx-slider-widget ul {
   padding: 0 !important;
+  margin: 0 !important;
 }
 
 #tx-slider-widget ul li {
