@@ -135,6 +135,7 @@ class IPageSliderSettings(Interface):
 
     slides = schema.List(
         title=_(u"Slides"),
+        description=_(u"Reorder the slides with drag & drop."),
         default=[]
     )
 

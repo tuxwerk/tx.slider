@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tx.slider\n"
-"POT-Creation-Date: 2017-07-21 17:48+0000\n"
+"POT-Creation-Date: 2017-08-17 09:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: CMS HU Berlin <plone@cms.hu-berlin.de>\n"
 "Language-Team: CMS HU Berlin <plone@cms.hu-berlin.de>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tx.slider\n"
 
-#: ./configure.zcml:51
+#: ./configure.zcml:55
 msgid "Add sliders to pages"
 msgstr "Slider zu Seiten hinzufügen"
 
@@ -66,7 +66,7 @@ msgstr "Änderung abgebrochen."
 msgid "Changes saved."
 msgstr "Änderungen gespeichert."
 
-#: ./interfaces.py:168
+#: ./interfaces.py:169
 msgid "Choose a content item to link this slide to."
 msgstr "Einen Inhalt wählen, der mit diesem Slide verknüpft wird."
 
@@ -74,7 +74,7 @@ msgstr "Einen Inhalt wählen, der mit diesem Slide verknüpft wird."
 msgid "Choose a layout for all sliders."
 msgstr "Ein Layout für alle Slides wählen."
 
-#: ./interfaces.py:147
+#: ./interfaces.py:148
 msgid "Choose a layout for this slide."
 msgstr "Ein Layout für diesen Slide wählen."
 
@@ -115,11 +115,11 @@ msgstr "Effekt"
 msgid "Enter one configuration per line. Format: 'Name|css-class-name'. First entry is default."
 msgstr "Eine Konfiguration pro Zeile. Format: 'Name|css-class-name'. Erster Eintrag ist Standard-Einstellung."
 
-#: ./interfaces.py:174
+#: ./interfaces.py:175
 msgid "External link"
 msgstr "Externer Link"
 
-#: ./interfaces.py:152
+#: ./interfaces.py:153
 msgid "Heading"
 msgstr "Überschrift"
 
@@ -131,7 +131,7 @@ msgstr "Horizontal"
 msgid "If unchecked slider will be shown on subpages"
 msgstr "Wenn nicht ausgewählt, wird der Slider auch auf Unterseiten angezeigt."
 
-#: ./interfaces.py:157
+#: ./interfaces.py:158
 msgid "Image"
 msgstr "Bild"
 
@@ -139,7 +139,7 @@ msgstr "Bild"
 msgid "Image scale width"
 msgstr "Bild-Skalierungs Breite"
 
-#: ./interfaces.py:146
+#: ./interfaces.py:147
 msgid "Layout"
 msgstr "Layout"
 
@@ -151,7 +151,7 @@ msgstr "'keine Auswahl' um den voreingestellten Effekt zu benutzen."
 msgid "Leave on 'no choice' for default navigation type."
 msgstr "'keine Auswahl' um die voreingestellte Navigation zu benutzen."
 
-#: ./interfaces.py:167
+#: ./interfaces.py:168
 msgid "Link to content"
 msgstr "Verknüpfung mit Inhalt"
 
@@ -180,7 +180,7 @@ msgstr "Bitte den Standard Effekt wählen."
 msgid "Please choose the default navigation type."
 msgstr "Bitte die Standard Navigation wählen."
 
-#: ./interfaces.py:175
+#: ./interfaces.py:176
 msgid "Please enter a full URL. Has precedence before the above field."
 msgstr "Bitte einen vollständigen Link angeben. Hat Vorrang vor dem obigen Feld."
 
@@ -192,9 +192,13 @@ msgstr "Im Kopf der Seite"
 msgid "Randomize the slides"
 msgstr "Zufällige Reihenfolge der Slides"
 
-#: ./configure.zcml:59
+#: ./configure.zcml:63
 msgid "Removes tx.slider add-on"
 msgstr "Entfernt die tx.slider Erweiterung"
+
+#: ./interfaces.py:138
+msgid "Reorder the slides with drag & drop."
+msgstr "Die Slides können mit drag & drop angeordnet werden."
 
 #: ./browser/forms.py:129
 msgid "Save"
@@ -250,11 +254,11 @@ msgstr "Geschwindigkeit der Slide-Übergänge (in Millisekunden)."
 msgid "Speed at which the slides will transition (in milliseconds). '0' for Default."
 msgstr "Geschwindigkeit der Slide-Übergänge (in Millisekunden). '0' für Voreinstellung."
 
-#: ./configure.zcml:51
+#: ./configure.zcml:55
 msgid "TX Slider"
 msgstr "TX Slider"
 
-#: ./interfaces.py:162
+#: ./interfaces.py:163
 msgid "Text"
 msgstr "Text"
 
@@ -275,7 +279,7 @@ msgstr "Navigation"
 msgid "Uncheck to hide the slider."
 msgstr "Abwählen um den Slider zu verstecken."
 
-#: ./configure.zcml:59
+#: ./configure.zcml:63
 msgid "Uninstall TX Slider"
 msgstr "TX Slider deinstallieren"
 

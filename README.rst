@@ -7,10 +7,10 @@ How-to
 ------
 On a page, click actions -> Add slider. This opens a setting page for your slides. Slides can be added by clicking ``add new slide``.
 
-Examples
---------
-
 TODO
+----
+
+As of now only english and german translation is available.
 
 Installation
 ------------
