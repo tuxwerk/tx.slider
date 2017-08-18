@@ -198,7 +198,7 @@ msgstr "Entfernt die tx.slider Erweiterung"
 
 #: ./interfaces.py:138
 msgid "Reorder the slides with drag & drop."
-msgstr "Die Slides können mit drag & drop angeordnet werden."
+msgstr "Die Slides können mit Drag & Drop angeordnet werden."
 
 #: ./browser/forms.py:129
 msgid "Save"
