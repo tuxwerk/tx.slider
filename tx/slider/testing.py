@@ -20,6 +20,8 @@ class Slider(PloneSandboxLayer):
         import tx.slider
         xmlconfig.file('configure.zcml', tx.slider,
                        context=configurationContext)
+        import collective.js.jqueryui
+        self.loadZCML(package=collective.js.jqueryui)
         z2.installProduct(app, 'tx.slider')
 
     def setUpPloneSite(self, portal):
