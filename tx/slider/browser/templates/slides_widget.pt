@@ -1,5 +1,6 @@
 <div id="tx-slider-widget" class=""
-     tal:attributes="class view/class_name;"
+     tal:attributes="class view/class_name;
+		     data-order-slides-url string:${view/slider_url}/@@tx-slides/all/@@order-slides"
      xmlns="http://www.w3.org/1999/xhtml"
      xmlns:tal="http://xml.zope.org/namespaces/tal"
      xmlns:metal="http://xml.zope.org/namespaces/metal"

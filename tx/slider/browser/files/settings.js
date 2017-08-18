@@ -19,21 +19,11 @@ function tx_slide_sortable() {
         order.push(slides.eq(i).attr('data-index'));
       }
       $.ajax({
-        url: $('base').attr('href') + '/../@@tx-slides/all/@@order-slides',
+        url: $('#tx-slider-widget').attr('data-order-slides-url'),
         type: 'POST',
         data: {
           order: order
-        },
-        // success: function(data){
-        //     $.ajax({
-        //         url: window.location.toString(),
-        //         success: function(data){
-        //             var dom = $(data);
-        //             $('#slidelist').replaceWith(dom.find('#slidelist'));
-        //             enableSlides();
-        //         }
-        //     });
-        // }
+        }
       }); 
     }
   });
