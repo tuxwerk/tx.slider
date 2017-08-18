@@ -14,6 +14,7 @@
 			 data-cycle-speed   view/speed;
 			 data-cycle-timeout view/pause;
 			 data-cycle-loop    continuous;
+			 data-max-z         string:3;
 			 data-cycle-prev    string:.tx-slider-${uid} .cycle-prev;
 			 data-cycle-next    string:.tx-slider-${uid} .cycle-next;
 			 "

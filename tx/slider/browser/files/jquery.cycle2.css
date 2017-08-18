@@ -29,7 +29,7 @@
   top: 50%;
   color: #fff;
   border: 0px solid #ccc;
-  z-index: 1000;
+  z-index: 4;
   cursor: pointer;
   height: 200px;
   line-height: 180px;
@@ -43,7 +43,7 @@
 .tx-slider-container .cycle-pager {
   position: absolute;
   bottom: 0;
-  z-index: 1000;
+  z-index: 4;
   color: #fff;
   font-size: 5em;
   width: 100%;
@@ -61,7 +61,7 @@
   position: absolute;
   left: 50px;
   top: 50px;
-  z-index: 1000;
+  z-index: 4;
   background: rgba(255,255,255,0.8);
   max-width: 80%;
   padding: 10px;
