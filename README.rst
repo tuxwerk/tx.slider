@@ -1,10 +1,11 @@
-
-Introduction
+TX Slider
 ============
-This product allows you to add slideshows to any page on a plone (version 4.3) site. It is based on the cycle2 jquery library: http://malsup.com/jquery/cycle2/
+This product allows you to add slideshows to any page on a plone (version 4.3) site. It uses the cycle2 jquery library: http://malsup.com/jquery/cycle2/
 
-How-to
-------
+See also configuration and layout README
+
+How to use
+----------
 On a page, click ``Actions`` -> ``Add slider``.
 
 .. image:: docs/images/add-slider.png
@@ -24,10 +25,8 @@ The slides are rendered by viewlets (at portaltop, belowcontenttitle or belowcon
 .. image:: docs/images/view-slider.png
    :width: 50%
 
-
 TODO
 ----
-
 As of now only english and german translation is available.
 
 Installation

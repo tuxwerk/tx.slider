@@ -1,7 +1,5 @@
-TX Slider
-=========
-
-Plone image slideshow based on the cycle2 jquery lib 
+TX Slider configuration and layout
+==================================
 
 Homepage: https://github.com/tuxwerk/tx.slider
 
@@ -40,10 +38,10 @@ All slides of a page can be configured by assigning a CSS class. The classes and
 * tx-slider-4-3
 * tx-slider-square
 
-For single slides
-~~~~~~~~~~~~~~~~~
+For individual slides
+~~~~~~~~~~~~~~~~~~~~~
 
-CSS classes can also be assigned to single slides. The classes and display names are configured through the Plone Control Panel. The add on has a predefined example class:
+CSS classes can also be assigned to individual slides. The classes and display names are configured through the Plone Control Panel. The add on has a predefined example class:
 
 * tx-slide-important
 
@@ -59,7 +57,7 @@ You can use following CSS to overload the height of slides (Add the CSS class 't
     padding-bottom: 10%;
   }
 
-Single slides can be styled as following (Add the CSS class 'red-slide' in the single slide configuration)::
+Individual slides can be styled as following (Add the CSS class 'red-slide' in the individual slide configuration)::
 
   /* show heading on red background */
   .red-slide h2.tx-slide-heading {
@@ -86,7 +84,7 @@ The slides are rendered with following HTML Code::
 
 The previous and next buttons::
 
- <div class="tx-slider-container tx-slider-UID tx-slider-CLASS">
+ <div class="tx-slider-container tx-slider-UID GLOBAL-SLIDER-CLASS">
    <div class="cycle-next"></div>
    <div class="cycle-prev"></div>
    ...
@@ -94,7 +92,7 @@ The previous and next buttons::
 
 The pager::
 
- <div class="tx-slider-container tx-slider-UID tx-slider-CLASS">
+ <div class="tx-slider-container tx-slider-UID INDIVIDUAL-SLIDER-CLASS">
    <div class="cycle-slideshow">
      <div class="cycle-pager">
        <span class="cycle-pager-active">•</span>
