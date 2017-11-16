@@ -2,7 +2,9 @@ TX Slider
 ============
 This product allows you to add slideshows to any page on a plone (version 4.3) site. It uses the cycle2 jquery library: http://malsup.com/jquery/cycle2/
 
-See also configuration and layout README
+See also configuration and layout `README`_:
+
+.. _README: tx/tiles/README.rst
 
 How to use
 ----------
