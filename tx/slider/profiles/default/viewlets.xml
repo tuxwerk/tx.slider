@@ -4,6 +4,9 @@
     <order manager="plone.portaltop" skinname="*">
       <viewlet name="tx.slider.portaltop" />
     </order>
+    <order manager="plone.abovecontent" skinname="*">
+      <viewlet name="tx.slider.abovecontent" />
+    </order>
     <order manager="plone.belowcontenttitle" skinname="*">
       <viewlet name="tx.slider.belowcontenttitle" />
     </order>

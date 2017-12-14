@@ -77,6 +77,8 @@ class TestSetup(BaseTest):
         storage = queryUtility(IViewletSettingsStorage)
         self.failUnless('tx.slider.portaltop' in
                         storage.getOrder('plone.portaltop', None))
+        self.failUnless('tx.slider.abovecontent' in
+                        storage.getOrder('plone.abovecontent', None))
         self.failUnless('tx.slider.belowcontenttitle' in
                         storage.getOrder('plone.belowcontenttitle', None))
         self.failUnless('tx.slider.belowcontent' in
@@ -87,6 +89,8 @@ class TestSetup(BaseTest):
         storage = queryUtility(IViewletSettingsStorage)
         self.failUnless('tx.slider.portaltop' not in
                         storage.getOrder('plone.portaltop', None))
+        self.failUnless('tx.slider.abovecontent' not in
+                        storage.getOrder('plone.abovecontent', None))
         self.failUnless('tx.slider.belowcontenttitle' not in
                         storage.getOrder('plone.belowcontenttitle', None))
         self.failUnless('tx.slider.belowcontent' not in

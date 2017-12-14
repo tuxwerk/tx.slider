@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-08-17 09:17+0000\n"
+"POT-Creation-Date: 2017-12-14 18:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tx.slider\n"
+
+#: ./interfaces.py:131
+msgid "Above content"
+msgstr ""
 
 #: ./configure.zcml:55
 msgid "Add sliders to pages"
@@ -33,7 +37,7 @@ msgstr ""
 msgid "All uploaded images will be scaled down to this value."
 msgstr ""
 
-#: ./browser/templates/slides_widget.pt:34
+#: ./browser/templates/slides_widget.pt:35
 msgid "Are you sure you want to remove this slide?"
 msgstr ""
 
@@ -41,11 +45,11 @@ msgstr ""
 msgid "Arrows"
 msgstr ""
 
-#: ./interfaces.py:132
+#: ./interfaces.py:133
 msgid "Below content"
 msgstr ""
 
-#: ./interfaces.py:131
+#: ./interfaces.py:132
 msgid "Below title"
 msgstr ""
 
@@ -69,7 +73,7 @@ msgstr ""
 msgid "Changes saved."
 msgstr ""
 
-#: ./interfaces.py:169
+#: ./interfaces.py:170
 msgid "Choose a content item to link this slide to."
 msgstr ""
 
@@ -77,7 +81,7 @@ msgstr ""
 msgid "Choose a layout for all sliders."
 msgstr ""
 
-#: ./interfaces.py:148
+#: ./interfaces.py:149
 msgid "Choose a layout for this slide."
 msgstr ""
 
@@ -118,11 +122,11 @@ msgstr ""
 msgid "Enter one configuration per line. Format: 'Name|css-class-name'. First entry is default."
 msgstr ""
 
-#: ./interfaces.py:175
+#: ./interfaces.py:176
 msgid "External link"
 msgstr ""
 
-#: ./interfaces.py:153
+#: ./interfaces.py:154
 msgid "Heading"
 msgstr ""
 
@@ -134,7 +138,7 @@ msgstr ""
 msgid "If unchecked slider will be shown on subpages"
 msgstr ""
 
-#: ./interfaces.py:158
+#: ./interfaces.py:159
 msgid "Image"
 msgstr ""
 
@@ -142,7 +146,7 @@ msgstr ""
 msgid "Image scale width"
 msgstr ""
 
-#: ./interfaces.py:147
+#: ./interfaces.py:148
 msgid "Layout"
 msgstr ""
 
@@ -154,7 +158,7 @@ msgstr ""
 msgid "Leave on 'nothing selected' for default navigation type."
 msgstr ""
 
-#: ./interfaces.py:168
+#: ./interfaces.py:169
 msgid "Link to content"
 msgstr ""
 
@@ -183,7 +187,7 @@ msgstr ""
 msgid "Please choose the default navigation type."
 msgstr ""
 
-#: ./interfaces.py:176
+#: ./interfaces.py:177
 msgid "Please enter a full URL. Has precedence before the above field."
 msgstr ""
 
@@ -199,7 +203,7 @@ msgstr ""
 msgid "Removes tx.slider add-on"
 msgstr ""
 
-#: ./interfaces.py:138
+#: ./interfaces.py:139
 msgid "Reorder the slides with drag & drop."
 msgstr ""
 
@@ -240,7 +244,7 @@ msgid "Slider position"
 msgstr ""
 
 #: ./browser/forms.py:209
-#: ./interfaces.py:137
+#: ./interfaces.py:138
 msgid "Slides"
 msgstr ""
 
@@ -261,7 +265,7 @@ msgstr ""
 msgid "TX Slider"
 msgstr ""
 
-#: ./interfaces.py:163
+#: ./interfaces.py:164
 msgid "Text"
 msgstr ""
 
@@ -290,14 +294,14 @@ msgstr ""
 msgid "Vertical"
 msgstr ""
 
-#: ./browser/templates/slides_widget.pt:47
+#: ./browser/templates/slides_widget.pt:48
 msgid "add new slide"
 msgstr ""
 
-#: ./browser/templates/slides_widget.pt:28
+#: ./browser/templates/slides_widget.pt:29
 msgid "edit slide"
 msgstr ""
 
-#: ./browser/templates/slides_widget.pt:34
+#: ./browser/templates/slides_widget.pt:35
 msgid "remove slide"
 msgstr ""

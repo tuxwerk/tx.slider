@@ -64,6 +64,13 @@
     permission="zope2.View" />
 
   <browser:viewlet
+    name="tx.slider.abovecontent"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+    class=".viewlet.SliderAboveContent"
+    layer="tx.slider.interfaces.ISliderLayer"
+    permission="zope2.View" />
+
+  <browser:viewlet
     name="tx.slider.belowcontenttitle"
     manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
     class=".viewlet.SliderBelowContentTitle"

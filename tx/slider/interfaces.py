@@ -128,6 +128,7 @@ class IPageSliderSettings(Interface):
         default="portal_top",
         vocabulary=SimpleVocabulary([
             SimpleTerm(title=_(u"Portal top"),    value='portal_top'),
+            SimpleTerm(title=_(u"Above content"), value='above_content'),
             SimpleTerm(title=_(u"Below title"),   value='below_content_title'),
             SimpleTerm(title=_(u"Below content"), value='below_content'),
         ]),

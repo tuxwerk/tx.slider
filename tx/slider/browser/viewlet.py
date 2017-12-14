@@ -109,6 +109,17 @@ class SliderPortalTop(BaseSliderViewlet):
         else:
             return ""
 
+class SliderAboveContent(BaseSliderViewlet):
+
+    def is_enabled(self):
+        return self.show() and self.sliderposition() == "above_content"
+
+    def render(self):
+        if self.is_enabled():
+            return super(SliderAboveContent, self).render()
+        else:
+            return ""
+
 class SliderBelowContentTitle(BaseSliderViewlet):
 
     def is_enabled(self):
